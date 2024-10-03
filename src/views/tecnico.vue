@@ -1,12 +1,12 @@
 <script>
 
 export default{
-    name:'Ejemplo',
+    name:'Tecnico',
 }
 </script>
 
 <template>
-    <h1>Ejemplo modulo</h1>
+    <h1>modulo Tecnico</h1>
 
 </template>
 
