@@ -9,6 +9,8 @@ import Tecnico from '../views/tecnico.vue'
 import Cargo from '../views/cargo.vue'
 import Marca from '../views/marca.vue'
 import Repuesto from '../views/repuesto.vue'
+import LayoutMain from '../components/LayoutMain.vue'
+import Login from '../components/Login.vue'
 
 
 const routes=[
@@ -16,6 +18,16 @@ const routes=[
         path:'/ejemplo',
         name:'Ejemplo',
         component:Ejemplo
+    },
+    {
+        path:'/',
+        name:'home',
+        component:LayoutMain
+    },
+    {
+        path:'/login',
+        name:'login',
+        component:Login
     },
     {
         path:'/ciudad',
