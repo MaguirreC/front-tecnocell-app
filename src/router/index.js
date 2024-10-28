@@ -1,16 +1,16 @@
 import {createRouter,createWebHistory} from 'vue-router'
 
 import Ejemplo from '../views/ejemplo.vue'
-import Ciudad from '../views/ciudad.vue'
-import Departamento from '../views/departamento.vue'
-import Cliente from '../views/cliente.vue'
-import Dispositivo from '../views/dispositivo.vue'
-import Tecnico from '../views/tecnico.vue'
-import Cargo from '../views/cargo.vue'
-import Marca from '../views/marca.vue'
-import Repuesto from '../views/repuesto.vue'
+import Departamento from '../views/departamento/departamento.vue'
+import Cliente from '../views/clientes/cliente.vue'
+import Dispositivo from '../views/dispositivo/dispositivo.vue'
+import Tecnico from '../views/tecnico/tecnico.vue'
+import Cargo from '../views/cargos/cargo.vue'
+import Marca from '../views/marca/marca.vue'
+import Repuesto from '../views/repuesto/repuesto.vue'
 import LayoutMain from '../components/LayoutMain.vue'
 import Login from '../components/Login.vue'
+import Ciudad from '../views/ciudad/ciudad.vue'
 
 
 const routes=[
@@ -58,6 +58,11 @@ const routes=[
         path:'/marca',
         name:'Marca',
         component:Marca
+    },
+    {
+        path:'/cliente',
+        name:'Cliente',
+        component:Cliente
     },
     {
         path:'/repuesto',
