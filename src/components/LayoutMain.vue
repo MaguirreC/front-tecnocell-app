@@ -19,7 +19,9 @@ export default{
       <el-header><Navbar /></el-header>
       <el-container style="height: 100vh;">
         <el-aside witdh="400px"><Sidebar /></el-aside>
-        <el-main>Main</el-main>
+        <el-main>
+          <slot name="slotLayout"></slot>
+        </el-main>
       </el-container>
     </el-container>
   </div>

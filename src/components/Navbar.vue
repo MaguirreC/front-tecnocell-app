@@ -15,7 +15,7 @@
           alt="Element logo"
         />
       </el-menu-item>
-      <el-sub-menu index="1">
+      <el-sub-menu ind  ex="1">
         <template #title>Usuario</template>
         <el-menu-item index="2-1">item one</el-menu-item>
         <el-menu-item index="2-2">item two</el-menu-item>
