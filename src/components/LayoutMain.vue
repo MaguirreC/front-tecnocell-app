@@ -1,6 +1,6 @@
 <script>
 import Navbar from './Navbar.vue';
-import Sidebar from './Sidebar.vue';    
+import Sidebar from './Sidebar.vue';
 export default{
     name:'LayoutMain',
     components: {
@@ -14,30 +14,34 @@ export default{
 
 <template>
    
-<div class="common-layout">
+   <el-container style="height: 100vh;">
+    <el-header>
+      <Navbar />
+    </el-header>
+    
     <el-container>
-      <el-header><Navbar /></el-header>
-      <el-container style="height: 100vh;">
-        <el-aside witdh="400px"><Sidebar /></el-aside>
-        <el-main>
-          <slot name="slotLayout"></slot>
-        </el-main>
-      </el-container>
+      <el-aside width="250px">
+        <Sidebar />
+      </el-aside>
+
+      <el-main class="main-content">
+        <slot name="slotLayout"></slot>
+      </el-main>
     </el-container>
-  </div>
-
-
+  </el-container>
 </template>
 
 
 <style scoped>
-/* estilos css CSS */
-
-.el-header{
-    padding: 0;
+.el-header {
+  padding: 0;
 }
 
-.el-container{
-    display: flex;
+.el-aside {
+  background-color: #f4f4f4;
+}
+
+.main-content {
+  position: relative;
 }
 </style>
