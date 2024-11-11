@@ -2,17 +2,19 @@
 <template>
     <el-menu
     :default-active="activeIndex"
-        background-color="#16161a "
+        background-color="#008080"
         text-color="#fff"
       class="el-menu-demo"
       mode="horizontal"
       :ellipsis="false"
       @select="handleSelect"
     >
-      <el-menu-item index="0">
+      <el-menu-item index="0" class="logo">
         <img
-          style="width: 100px"
+        src="../../images/LOGO-INMOBILIARIA-001.jpg"
+          style="width: 50px"
           alt="Element logo"
+
         />
       </el-menu-item>
       <el-sub-menu ind  ex="1">
@@ -44,6 +46,12 @@
 span.el-avatar.el-avatar--circle {
   margin-right: auto;
   padding: 0;
+}
+
+.logo{
+
+  mix-blend-mode:color-burn
+  ;
 }
   
   </style>
