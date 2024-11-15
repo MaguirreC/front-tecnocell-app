@@ -1,10 +1,70 @@
 <template>
-    <h1>formulario de clientes</h1>
+    <el-form
+      ref="formRef"
+      style="max-width: 80%"
+      :model="formulario"
+      :rules="rules"
+      label-width="auto"
+  
+      status-icon
+    >
+      <el-form-item label="Nombre" prop="nombre">
+        <el-input v-model="formulario.nombre" />
+      </el-form-item>
+    
+    </el-form>
+  </template>
+  
+  <script  setup>
+  import { reactive, ref ,watch} from 'vue'
+  
+  const props = defineProps({
+  dataValue: Object,
+});
+const datosFormulario = () => {
 
-</template>
+formulario.nombre = props.dataValue[0].nombre;
 
-<script setup>
-</script>
-
-<style scoped>
-</style>
+}
+  
+  const formRef = ref()
+  const formulario = reactive({
+    nombre: '',
+   
+  })
+  
+  
+  const rules = reactive({
+    nombre: [
+      { required: true, message: 'ingresa el nombre de la marca', trigger: 'blur' },
+     
+    ],
+  
+  })
+  
+  const validarFormulario=()=>{
+    return new Promise ((resolve)=>{
+          formRef.value?.validate((valid)=>{
+              if (valid) {
+                resolve(true)            
+              } else {
+                  resolve(false)             
+              }
+              
+          })
+          })  
+  }
+  
+  
+  const limpiarFormulario =()=>{
+      formRef.value.resetFields()    
+  }
+  watch(
+  () => props.dataValue,
+  (newData) => {
+    datosFormulario();
+  }
+);
+  defineExpose({formulario,validarFormulario,limpiarFormulario})
+  
+  </script>
