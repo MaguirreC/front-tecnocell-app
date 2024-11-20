@@ -21,7 +21,7 @@
       </el-form-item>
       <el-form-item label="Cargo" prop="cargo">
         <el-select v-model="formulario.cargo" placeholder="Activity zone">
-          <el-option v-for="cargo in cargos"
+          <el-option v-for="cargo in props.cargos"
           :key="cargo.id"
           :label="cargo.nombre"
           :value="cargo.id"/>
@@ -32,17 +32,18 @@
   </template>
   
   <script  setup>
-  import { reactive, ref } from 'vue'
+  import { reactive, ref ,watch} from 'vue'
 
   
   
   
   
-  const propiedad = defineProps({
+  const props = defineProps({
   cargos: {
     type:Array,
     required:true
-  }
+  },
+  dataValue: Object,
 });
 
  
@@ -54,6 +55,15 @@
     correo: '',
     cargo: '',
   })
+  const datosFormulario = () => {
+
+formulario.nombre = props.dataValue[0].nombre;
+formulario.apellido = props.dataValue[0].apellido;
+formulario.telefono = props.dataValue[0].telefono;
+formulario.correo = props.dataValue[0].correo;
+formulario.cargo = props.dataValue[0].id_cargo;
+
+}
   
 
   const rules = reactive({
@@ -90,6 +100,12 @@
 const limpiarFormulario =()=>{
     formRef.value.resetFields()    
 }
+watch(
+  () => props.dataValue,
+  (newData) => {
+    datosFormulario();
+  }
+);
 
 defineExpose({formulario,validarFormulario,limpiarFormulario})
   

@@ -8,24 +8,31 @@
 
     status-icon
   >
-    <el-form-item label="Nombre" prop="name">
+    <el-form-item label="Nombre" prop="nombre">
       <el-input v-model="formulario.nombre" />
     </el-form-item>
   
   </el-form>
 </template>
 
-<script lang="ts" setup>
-import { reactive, ref } from 'vue'
+<script  setup>
+import { reactive, ref, watch } from 'vue'
 
-
+const props = defineProps({
+  dataValue: Object,
+});
 
 const formRef = ref()
 const formulario = reactive({
   nombre: '',
  
 })
+const datosFormulario = () => {
 
+formulario.nombre = props.dataValue[0].nombre;
+
+
+}
 
 const rules = reactive({
   nombre: [
@@ -54,5 +61,12 @@ const limpiarFormulario =()=>{
 }
 
 defineExpose({formulario,validarFormulario,limpiarFormulario})
+
+watch(
+  () => props.dataValue,
+  (newData) => {
+    datosFormulario();
+  }
+);
 
 </script>
