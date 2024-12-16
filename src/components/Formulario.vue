@@ -8,7 +8,7 @@
           {{ titulo }}
         </el-button>
       </el-col>
-      <el-col :xs="6" :sm="6" :md="6" :lg="4" :xl="4    " class="form-container__button-group">
+      <el-col :xs="6" :sm="6" :md="6" :lg="4" :xl="4" class="form-container__button-group">
         <el-button size="large" class="form-container__button-cancel" @click="irAtras">Cancelar</el-button>
         <el-button type="primary" size="large" class="form-container__button-submit" @click="submit">
      {{ tituloBoton }}
@@ -35,7 +35,7 @@ import { computed } from 'vue';
       isOpen:Boolean
     })
 
-    const tituloBoton = computed(()=>(propiedad.isEdit ? 'Actual': 'Guardar'));
+    const tituloBoton = computed(()=>(propiedad.isEdit ? 'Actualizar': 'Guardar'));
     const isVisible = computed(()=>propiedad.isOpen)
     const $emit = defineEmits(['update:is-open']);
 
@@ -78,19 +78,20 @@ const submit=()=>{
   justify-content: space-between;
 }
 
-/* estilos del titulo delformulario  */
+
 .form-container__title-button {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 
-/* alinear los botones en la parte soperior derecha */
 .form-container__button-group {
   display:flex;
   justify-content: flex-end;
   gap: 10px;
   flex-wrap: nowrap;
+  align-items: ce ;
+  width: 100%;
 
 
 }
@@ -99,6 +100,7 @@ const submit=()=>{
   background-color: #2fbe98;
   border: none;
   color: white;
+  
 
 }
 

@@ -65,7 +65,7 @@ formulario.cedula = props.dataValue[0].cedula;
       { required: true, message: 'por favor ingresar el nombre', trigger: 'blur' },
     ],
     apellido: [
-      { required: true, message: 'por favor ingresar el nombre', trigger: 'blur' },
+      { required: true, message: 'por favor ingresar el apellido', trigger: 'blur' },
     ],
     telefono: [
       { required: true, message: 'por favor ingresar el numero telefonico', trigger: 'blur' },

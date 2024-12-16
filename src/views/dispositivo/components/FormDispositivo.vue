@@ -80,27 +80,27 @@ formulario.marca = props.dataValue[0].id_marca;
   
   const rules = reactive({
     tipo: [
-      { required: true, message: 'ingresa el nombre del cargo', trigger: 'blur' },
+      { required: true, message: 'ingresa el tipo de dispositivo', trigger: 'blur' },
      
     ],
     capacidad: [
-      { required: true, message: 'ingresa el nombre del cargo', trigger: 'blur' },
+      { required: true, message: 'ingresa la capacidad', trigger: 'blur' },
      
     ],
     año: [
-      { required: true, message: 'ingresa el nombre del cargo', trigger: 'blur' },
+      { required: true, message: 'ingresa el año de lanzamiento', trigger: 'blur' },
      
     ],
     imei: [
-      { required: true, message: 'ingresa el nombre del cargo', trigger: 'blur' },
+      { required: true, message: 'ingresa el imei', trigger: 'blur' },
      
     ],
     cliente: [
-      { required: true, message: 'ingresa el nombre del cargo', trigger: 'blur' },
+      { required: true, message: 'ingresa el nombre del cliente', trigger: 'blur' },
      
     ],
     marca: [
-      { required: true, message: 'ingresa el nombre del cargo', trigger: 'blur' },
+      { required: true, message: 'ingresa la marca del dispositivo', trigger: 'blur' },
      
     ],
     

@@ -2,6 +2,7 @@
 <template>
     <el-menu
     :default-active="activeIndex"
+        router
         background-color="#008080"
         text-color="#fff"
       class="el-menu-demo"
@@ -17,12 +18,13 @@
 
         />
       </el-menu-item>
-      <el-sub-menu ind  ex="1">
+      <el-sub-menu index="1">
         <template #title>Usuario</template>
-        <el-menu-item index="2-1">item one</el-menu-item>
-        <el-menu-item index="2-2">item two</el-menu-item>
-        <el-menu-item index="2-3">item three</el-menu-item>
+        <el-menu-item index="orden">Crear Orden</el-menu-item>
+        <el-menu-item index="2-2">Buscar Orden</el-menu-item>
+        <el-menu-item index="2-3">Cerrar Sesion</el-menu-item>
       </el-sub-menu>
+     
     </el-menu>
   </template>
   

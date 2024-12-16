@@ -51,7 +51,7 @@ formulario.departamento = props.dataValue[0].id_departamento;
   
   const rules = reactive({
     nombre: [
-      { required: true, message: 'ingresa el nombre del departamento', trigger: 'blur' },
+      { required: true, message: 'ingresa el nombre de la ciudad', trigger: 'blur' },
      
     ],
     departamento: [

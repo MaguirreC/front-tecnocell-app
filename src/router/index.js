@@ -11,6 +11,10 @@ import Repuesto from '../views/repuesto/repuesto.vue'
 import LayoutMain from '../components/LayoutMain.vue'
 import Login from '../components/Login.vue'
 import Ciudad from '../views/ciudad/ciudad.vue'
+import Inventario from '../views/inventario/inventario.vue'
+import Orden from '../views/orden/orden.vue'
+import component from 'element-plus/es/components/tree-select/src/tree-select-option.mjs'
+import Prueba from '../views/prueba.vue'
 
 
 const routes=[
@@ -68,6 +72,21 @@ const routes=[
         path:'/repuesto',
         name:'Repuesto',
         component:Repuesto
+    },
+    {
+        path:'/inventario',
+        name:'Inventario',
+        component:Inventario
+    },
+    {
+        path:'/orden',
+        name:'Orden',
+        component:Orden
+    },
+    {
+        path:'/prueba',
+        name:'Prueba',
+        component:Prueba
     }
 ]
 

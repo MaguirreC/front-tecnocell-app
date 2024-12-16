@@ -25,6 +25,7 @@
               <el-menu-item index="repuesto">repuestos</el-menu-item>
               <el-menu-item index="tecnico">tecnicos</el-menu-item>
               <el-menu-item index="inventario">Inventario</el-menu-item>
+              <el-menu-item index="orden">Orden</el-menu-item>
         
             
           </el-sub-menu>
